@@ -42,7 +42,7 @@ def getAllIds(browser, baseURL):
     nTags = len(tags)
     for link in links:
         n = 0
-        link.replace("&page=0", "")
+        link = link.replace("&page=0", "")
 
         # Do while
         browser.get('{}&page={}'.format(link, str(n)))
