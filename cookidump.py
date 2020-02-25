@@ -34,7 +34,9 @@ def getAllIds(browser, baseURL):
     ids, idsTotal, links = [], [], []
     browser.get(baseURL)
     time.sleep(2)
-    tags = browser.find_elements_by_class_name('wf-tag-cloud__tag')
+    # 浏览我们的食谱分类，每个连接的class名
+    # tags = browser.find_elements_by_class_name('wf-tag-cloud__tag')
+    tags = browser.find_elements_by_class_name('core-tags-wrapper__tag')
 
     for tag in tags: links.append(tag.get_attribute('href'))
 
